@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To-do List</title>
-  </head>
-  <body>
 
-    <h1>Minhas tarefas</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+  <h1>TODO List</h1>
+  <div class="input-area">
     <input type="text" id="input-tarefa" placeholder="Digite uma tarefa..." />
     <button id="btn-adicionar">Adicionar</button>
+  </div>
+  <ul id="lista-tarefas"></ul>
 
-    <ul id="lista-tarefas"></ul>
+  <script src="/script.js"></script>
+</body>
 
-    <script src="/script.js"></script>
-  </body>
 </html>

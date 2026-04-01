@@ -2,8 +2,9 @@ const input = document.getElementById("input-tarefa");
 const btn = document.getElementById("btn-adicionar")
 const lista = document.getElementById("lista-tarefas")
 
-let tarefas = dados;
 const dados = JSON.parse(localStorage.getItem('tarefas')) || [];
+let tarefas = dados;
+
 dados.forEach(tarefas => {
     const item = document.createElement('li');
     item.textContent = tarefas.nome
@@ -24,6 +25,7 @@ function adicionarTarefa() {
 
     const remove = document.createElement('button');
     remove.textContent = "x"
+    remove.classList.add('btn-remover')
     remove.addEventListener('click', () => {
         item.remove()
     })
