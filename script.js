@@ -2,6 +2,7 @@
 const input = document.getElementById("input-tarefa");
 const btn = document.getElementById("btn-adicionar")
 const lista = document.getElementById("lista-tarefas")
+const clear = document.getElementById("btn-clear")
 
 // Lê as tarefas salvas no localStorage — se não tiver nada, começa com array vazio
 const dados = JSON.parse(localStorage.getItem('tarefas')) || [];
@@ -12,6 +13,12 @@ let tarefas = dados;
 // Quando a página carrega, renderiza todas as tarefas salvas na tela
 dados.forEach(tarefa => criarItemLista(tarefa))
 
+//quando clicar, vai apagar tudo.
+clear.addEventListener('click', () => {
+    localStorage.clear()
+    lista.innerHTML = ""
+    tarefas = []
+})
 // Cria um item <li> na lista com o texto e o botão de remover
 function criarItemLista(tarefa) {
     const item = document.createElement('li')
