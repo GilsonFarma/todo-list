@@ -2,8 +2,14 @@ const input = document.getElementById("input-tarefa");
 const btn = document.getElementById("btn-adicionar")
 const lista = document.getElementById("lista-tarefas")
 
-let tarefas = dados || [];
-const dados = JSON.parse(localStorage.getItem('tarefas'));
+let tarefas = dados;
+const dados = JSON.parse(localStorage.getItem('tarefas')) || [];
+dados.forEach(tarefas => {
+    const item = document.createElement('li');
+    item.textContent = tarefas.nome
+    lista.appendChild(item)
+    
+});
 
 function adicionarTarefa() {
     const texto = input.value;
