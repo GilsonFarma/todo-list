@@ -21,6 +21,8 @@ h1 {
 .input-area {
     display: flex;
     flex-direction: row;
+    overflow: visible;
+    position: relative;
 }
 
 input {
@@ -76,10 +78,46 @@ ul {
     font-size: 1rem;
     font-weight: bold;
 }
+
 .texto-riscado {
     text-decoration: line-through;
     opacity: 0.5;
 }
+
 .texto-riscado .btn-remover {
     text-decoration: none;
+}
+
+details {
+    position: relative;
+    margin-left: 3px;
+}
+
+summary {
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+    border-radius: 0 6px 6px 0;
+    background-color: #e94560;
+    list-style: none;
+}
+
+details button {
+    position: absolute;
+    left: 0;
+    width: 120px;
+    z-index: 10;
+    display: block;
+    background-color: #e94560;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0.6rem 1rem;
+}
+
+details button:first-child {
+    top: 38px;
+}
+
+details button:last-child {
+    top: 76px;
 }
