@@ -1,32 +1,41 @@
 # To-do List ✅
 
-Aplicação web para organizar suas tarefas do dia a dia — adicione, remova e as tarefas ficam salvas mesmo fechando o navegador.
+Aplicação web para organizar suas tarefas do dia a dia — adicione, remova, ordene e as tarefas ficam salvas mesmo fechando o navegador.
+
+🎮 **Demo:** https://gilsonfarma.github.io/todo-list/
 
 ## Funcionalidades
 
-- Adicionar tarefas digitando e clicando em "Adicionar" ou pressionando Enter
+- Adicionar tarefas clicando em "Adicionar" ou pressionando Enter
 - Remover tarefas individualmente
+- Marcar tarefa como concluída com um clique
+- Limpar todas as tarefas de uma vez
+- Ordenar por nome (A → Z) ou por data de criação
 - Dados salvos no localStorage — persistem ao recarregar a página
 
 ## Tecnologias
 
 - HTML5
-- CSS3
+- CSS3 — dark mode, flexbox, dropdown
 - JavaScript vanilla
 
 ## Como usar
 
-1. Acesse a [demo online]( https://gilsonfarma.github.io/todo-list/) ou clone o repositório
+1. Acesse a [demo online](https://gilsonfarma.github.io/todo-list/)
 2. Digite uma tarefa no campo de texto
 3. Clique em "Adicionar" ou pressione Enter
-4. Clique em "x" para remover uma tarefa
+4. Clique na tarefa pra marcar como concluída
+5. Clique em "x" pra remover uma tarefa
+6. Use o menu "Ordenar" pra organizar a lista
 
 ## O que aprendi
 
 - Manipulação do DOM com createElement, appendChild e remove
-- Como eventos de clique e teclado funcionam juntos
-- Persistência de dados com localStorage e a conversão entre array e string com JSON.stringify e JSON.parse
-- Debugar bugs de estado — quando o array em memória não reflete o que está salvo
+- Persistência de dados com localStorage e conversão com JSON.stringify e JSON.parse
+- Refatoração de código — extrair lógica repetida em funções reutilizáveis
+- Arrow functions e como deixar o código mais limpo e legível
+- Estilização com CSS dark mode, flexbox e posicionamento absoluto
+- Debugar bugs de estado e de escopo no JavaScript
 
 ## Autor
 
