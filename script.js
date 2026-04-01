@@ -3,6 +3,8 @@ const input = document.getElementById("input-tarefa");
 const btn = document.getElementById("btn-adicionar")
 const lista = document.getElementById("lista-tarefas")
 const clear = document.getElementById("btn-clear")
+const orderNome = document.getElementById('btn-nome');
+const orderData = document.getElementById("btn-data");
 
 // Lê as tarefas salvas no localStorage — se não tiver nada, começa com array vazio
 const dados = JSON.parse(localStorage.getItem('tarefas')) || [];
@@ -19,6 +21,31 @@ clear.addEventListener('click', () => {
     lista.innerHTML = ""
     tarefas = []
 })
+
+//Função ordenar
+function ordenarNome() {
+    tarefas.sort((a, b) => {
+        if (a.nome < b.nome) return -1
+        if (a.nome > b.nome) return 1
+        return 0
+    })
+    lista.innerHTML = ""
+    tarefas.forEach(tarefa => criarItemLista(tarefa))
+}
+
+function ordenarData() {
+    tarefas.sort((a, b) => a.id - b.id)
+    lista.innerHTML = ""
+    tarefas.forEach(tarefa => criarItemLista(tarefa))
+}
+
+orderData.addEventListener('click', () => {
+    ordenarData()
+})
+orderNome.addEventListener('click', () => {
+    ordenarNome()
+})
+
 // Cria um item <li> na lista com o texto e o botão de remover
 function criarItemLista(tarefa) {
     const item = document.createElement('li')
@@ -30,10 +57,16 @@ function criarItemLista(tarefa) {
     remove.classList.add('btn-remover')
 
     // Quando clicar no x: remove do array, salva no localStorage e remove da tela
-    remove.addEventListener('click', () => {
+    remove.addEventListener('click', (event) => {
+        event.stopPropagation()
         tarefas = tarefas.filter(t => t.id !== tarefa.id)
         localStorage.setItem('tarefas', JSON.stringify(tarefas))
         item.remove()
+    })
+
+    //Marcar o que foi feito.
+    item.addEventListener('click', () => {
+        item.classList.toggle('texto-riscado')
     })
 
     item.appendChild(remove)  // coloca o botão dentro do <li>
