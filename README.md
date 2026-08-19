@@ -2,7 +2,7 @@
 
 Aplicação web para organizar suas tarefas do dia a dia — adicione, remova, ordene e as tarefas ficam salvas mesmo fechando o navegador.
 
-🎮 **Demo:** https://gilsonfarma.github.io/todo-list/
+🎮 **Demo:** *(GitHub Pages será reativado em breve para o username GilsonCataoDev)*
 
 ## Funcionalidades
 
@@ -21,7 +21,7 @@ Aplicação web para organizar suas tarefas do dia a dia — adicione, remova, o
 
 ## Como usar
 
-1. Acesse a [demo online](https://gilsonfarma.github.io/todo-list/)
+1. Acesse a [demo online (em breve)](https://GilsonCataoDev.github.io/todo-list/)
 2. Digite uma tarefa no campo de texto
 3. Clique em "Adicionar" ou pressione Enter
 4. Clique na tarefa pra marcar como concluída
